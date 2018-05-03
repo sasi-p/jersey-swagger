@@ -1,0 +1,484 @@
+{
+	"type": "object",
+	"optional": true,
+	"properties": {
+		"payload": {
+			"type": "object",
+			"optional": true,
+			"properties": {
+				"templateData": {
+					"type": "array",
+					"optional": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"pdfInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"enabled": {
+							"type": "boolean",
+							"optional": true
+						}
+					}
+				},
+				"generalInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"location": {
+							"type": "string",
+							"optional": true
+						},
+						"country": {
+							"type": "string",
+							"optional": true
+						},
+						"sba": {
+							"type": "string",
+							"optional": true
+						},
+						"form": {
+							"type": "string",
+							"optional": true
+						},
+						"company": {
+							"type": "string",
+							"optional": true
+						}
+					}
+				},
+				"channels": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"printer": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": false
+								},
+								"fetchPrinterViaSBA": {
+									"type": "boolean",
+									"optional": false
+								},
+								"printerName": {
+									"type": "string",
+									"optional": true
+								},
+								"noOfCopies": {
+									"type": "integer",
+									"optional": true
+								},
+								"outputTray": {
+									"type": "integer",
+									"optional": true
+								},
+								"inputTray": {
+									"type": "integer",
+									"optional": true
+								}
+							}
+						},
+						"toEcliso": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"fetchUIDFromSBA": {
+									"type": "boolean",
+									"optional": true
+								},
+								"contractNo": {
+									"type": "string",
+									"optional": true
+								},
+								"uid": {
+									"type": "string",
+									"optional": true
+								},
+								"customerNo": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						},
+						"email": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": true
+								},
+								"fetchSenderEmailFromSBA": {
+									"type": "boolean",
+									"optional": true
+								},
+								"from": {
+									"type": "string",
+									"optional": true
+								},
+								"subject": {
+									"type": "string",
+									"optional": true
+								},
+								"bcc": {
+									"type": "string",
+									"optional": true
+								},
+								"to": {
+									"type": "string",
+									"optional": true
+								},
+								"copy": {
+									"type": "string",
+									"optional": true
+								},
+								"body": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						},
+						"archive": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": true
+								},
+								"archiveMode": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						},
+						"fax": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": true
+								},
+								"faxNumber": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						}
+					}
+				},
+				"batchInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"enabled": {
+							"type": "boolean",
+							"optional": true
+						},
+						"batchJobId": {
+							"type": "string",
+							"optional": true
+						},
+						"batchSeqNo": {
+							"type": "integer",
+							"optional": true
+						},
+						"batchEndFlag": {
+							"type": "boolean",
+							"optional": true
+						}
+					}
+				},
+				"dmsattachmentInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"listOfDocIds": {
+							"type": "array",
+							"optional": true,
+							"items": {
+								"type": "object",
+								"optional": true,
+								"properties": {
+									"docReferenceId": {
+										"type": "string",
+										"optional": true
+									},
+									"renderAnnotation": {
+										"type": "boolean",
+										"optional": true
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"generateDocumentsPayload": {
+			"type": "object",
+			"optional": true,
+			"properties": {
+				"templateData": {
+					"type": "array",
+					"optional": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"pdfInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"enabled": {
+							"type": "boolean",
+							"optional": true
+						}
+					}
+				},
+				"generalInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"location": {
+							"type": "string",
+							"optional": true
+						},
+						"country": {
+							"type": "string",
+							"optional": true
+						},
+						"sba": {
+							"type": "string",
+							"optional": true
+						},
+						"form": {
+							"type": "string",
+							"optional": true
+						},
+						"company": {
+							"type": "string",
+							"optional": true
+						}
+					}
+				},
+				"channels": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"printer": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": false
+								},
+								"fetchPrinterViaSBA": {
+									"type": "boolean",
+									"optional": false
+								},
+								"printerName": {
+									"type": "string",
+									"optional": true
+								},
+								"noOfCopies": {
+									"type": "integer",
+									"optional": true
+								},
+								"outputTray": {
+									"type": "integer",
+									"optional": true
+								},
+								"inputTray": {
+									"type": "integer",
+									"optional": true
+								}
+							}
+						},
+						"toEcliso": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"fetchUIDFromSBA": {
+									"type": "boolean",
+									"optional": true
+								},
+								"contractNo": {
+									"type": "string",
+									"optional": true
+								},
+								"uid": {
+									"type": "string",
+									"optional": true
+								},
+								"customerNo": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						},
+						"email": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": true
+								},
+								"fetchSenderEmailFromSBA": {
+									"type": "boolean",
+									"optional": true
+								},
+								"from": {
+									"type": "string",
+									"optional": true
+								},
+								"subject": {
+									"type": "string",
+									"optional": true
+								},
+								"bcc": {
+									"type": "string",
+									"optional": true
+								},
+								"to": {
+									"type": "string",
+									"optional": true
+								},
+								"copy": {
+									"type": "string",
+									"optional": true
+								},
+								"body": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						},
+						"archive": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": true
+								},
+								"archiveMode": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						},
+						"fax": {
+							"type": "object",
+							"optional": true,
+							"properties": {
+								"enabled": {
+									"type": "boolean",
+									"optional": true
+								},
+								"faxNumber": {
+									"type": "string",
+									"optional": true
+								}
+							}
+						}
+					}
+				},
+				"batchInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"enabled": {
+							"type": "boolean",
+							"optional": true
+						},
+						"batchJobId": {
+							"type": "string",
+							"optional": true
+						},
+						"batchSeqNo": {
+							"type": "integer",
+							"optional": true
+						},
+						"batchEndFlag": {
+							"type": "boolean",
+							"optional": true
+						}
+					}
+				},
+				"dmsattachmentInfo": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"listOfDocIds": {
+							"type": "array",
+							"optional": true,
+							"items": {
+								"type": "object",
+								"optional": true,
+								"properties": {
+									"docReferenceId": {
+										"type": "string",
+										"optional": true
+									},
+									"renderAnnotation": {
+										"type": "boolean",
+										"optional": true
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"header": {
+			"type": "object",
+			"optional": true,
+			"properties": {
+				"locale": {
+					"type": "string",
+					"optional": true
+				},
+				"serviceName": {
+					"type": "string",
+					"optional": true
+				},
+				"isRequestResponse": {
+					"type": "boolean",
+					"optional": true
+				},
+				"applicationName": {
+					"type": "string",
+					"optional": true
+				},
+				"requestSecurityContext": {
+					"type": "object",
+					"optional": true,
+					"properties": {
+						"credentialInfo": {
+							"type": "string",
+							"optional": true
+						},
+						"securityToken": {
+							"type": "string",
+							"optional": true
+						}
+					}
+				},
+				"requestInstanceId": {
+					"type": "string",
+					"optional": true
+				}
+			}
+		}
+	}
+}

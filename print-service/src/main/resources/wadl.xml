@@ -1,0 +1,36 @@
+<application xmlns="http://wadl.dev.java.net/2009/02">
+	<doc xmlns:jersey="http://jersey.java.net/" jersey:generatedBy="Jersey: 2.27 2018-04-10 07:34:57" />
+	<doc xmlns:jersey="http://jersey.java.net/"
+		jersey:hint="This is simplified WADL with user and core resources only. To get full WADL with extended resources use the query parameter detail. Link: http://localhost:8080/print-service/printservice/application.wadl?detail=true" />
+	<grammars />
+	<resources base="http://localhost:8080/print-service/printservice/">
+		<resource path="/api/v1/omx">
+			<resource path="/generateDocuments">
+				<method id="generateDocuments" name="POST">
+					<request>
+						<representation mediaType="application/json" />
+					</request>
+					<response>
+						<representation mediaType="application/json" />
+					</response>
+				</method>
+			</resource>
+		</resource>
+		<resource path="/">
+			<resource path="/swagger.yaml">
+				<method id="getListingYaml" name="GET">
+					<response>
+						<representation mediaType="application/yaml" />
+					</response>
+				</method>
+			</resource>
+			<resource path="/swagger.json">
+				<method id="getListingJson" name="GET">
+					<response>
+						<representation mediaType="application/json" />
+					</response>
+				</method>
+			</resource>
+		</resource>
+	</resources>
+</application>

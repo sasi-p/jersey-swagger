@@ -1,0 +1,72 @@
+{
+	"header": {
+		"locale": "En",
+		"serviceName": "GenerateDocuments",
+		"requestInstanceId": "20180430",
+		"isRequestResponse": true,
+		"applicationName": "print service",
+		"requestSecurityContext": {
+			"securityToken": "T233434",
+			"credentialInfo": "admin123"
+		}
+	},
+	"payload": {
+		"channels": {
+			"fax": {
+				"enabled": true,
+				"faxNumber": "8473874334"
+			},
+			"archive": {
+				"archiveMode": "Yest",
+				"enabled": true
+			},
+			"email": {
+				"copy": "2",
+				"enabled": true,
+				"from": "from@domain.com",
+				"body": "body content",
+				"to": "to@domain.com",
+				"bcc": "bcc@domain.com",
+				"subject": "Subjct content",
+				"fetchSenderEmailFromSBA": true
+			},
+			"printer": {
+				"enabled": true,
+				"noOfCopies": 2,
+				"outputTray": 7343,
+				"inputTray": 1234,
+				"printerName": "DL Printer",
+				"fetchPrinterViaSBA": true
+			},
+			"toEcliso": {
+				"uid": "UID234",
+				"customerNo": "743934",
+				"contractNo": "76834894",
+				"fetchUIDFromSBA": true
+			}
+		},
+		"pdfInfo": {
+			"enabled": true
+		},
+		"generalInfo": {
+			"location": "Germany",
+			"country": "GE",
+			"form": "UCS",
+			"company": "DL",
+			"sba": "SBA"
+		},
+		"templateData": "c2FtcGxlIGRhdGEgZm9yIGJ5dGUgYXJyYXk=",
+		"batchInfo": {
+			"enabled": true,
+			"batchEndFlag": true,
+			"batchSeqNo": 1,
+			"batchJobId": "45"
+		},
+		"dmsattachmentInfo": {
+			"listOfDocIds": {
+				"docReferenceId": "743943773",
+				"renderAnnotation": true
+			}
+		}
+	}
+}

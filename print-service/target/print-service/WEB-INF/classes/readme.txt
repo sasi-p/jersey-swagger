@@ -1,0 +1,1 @@
+WADL : http://localhost:8080/print-service/printservice/application.wadl

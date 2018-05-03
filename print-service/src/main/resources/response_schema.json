@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"optional": true,
+	"properties": {
+		"data": {
+			"type": "array",
+			"optional": true,
+			"items": {
+				"type": "string"
+			}
+		},
+		"status": {
+			"type": "string",
+			"optional": true
+		},
+		"errorMsg": {
+			"type": "string",
+			"optional": true
+		},
+		"messageId": {
+			"type": "string",
+			"optional": true
+		}
+	}
+}
